@@ -1,0 +1,26 @@
+.chapters{
+  font-family: sans-serif;
+  counter-reset: chapters-counter;
+}
+
+.chapter{
+  margin-bottom: 0.4rem;
+}
+
+.chapter:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.chapter::before{
+  content: "Chapter " counter(chapters-counter);
+  counter-increment: chapters-counter;
+  background-color: black;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  margin-right: 0.5rem;
+  /* border-bottom: 6px solid white; */
+  border-radius: 2px;
+}
