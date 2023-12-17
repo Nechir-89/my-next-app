@@ -1,0 +1,16 @@
+header{
+  border-bottom: 1px solid black;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+nav{
+  counter-reset: nav-counter;
+}
+
+nav>div::before{
+  content: counter(nav-counter) "- ";
+  counter-increment: nav-counter;
+}
